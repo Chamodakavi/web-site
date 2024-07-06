@@ -1,0 +1,160 @@
+@font-face{
+    font-family: "uni";
+    src: url(fonts/Univers\ LT\ Std\ 45\ Light.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "uni";
+}
+
+header{
+    margin: none;
+    padding: none;
+    background-color: rgb(164, 176, 5);
+    height: 54px;
+}
+.logo-container{
+    display: block;
+    height: 30px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: right;
+    margin-left: 93%;
+    width: 5%;
+}
+.h-logo{
+    padding-top: 10px;
+    height: 35px;
+}
+/*-------------------------------------- navigation bar-------------------------- */
+.nav{
+    display: flex;
+    height: 64px;
+    transition: all .5s;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+}
+.fixed-nav{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: -10px;
+    transition: 0.5s ease;
+}
+
+.show-nav{
+    height: 260px;
+    transition: all .5s;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
+} 
+
+.restaurant-logo{
+    width: 68px;
+    height: 55px;
+    margin-top: -7px;
+    margin-left: -5px;
+}
+.nav-container{
+    padding-top: 15px;
+    padding-left: 30px;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    transition: all .5s;
+}
+.nav-con-click{
+    font-size: 0.8rem;
+}
+ul{
+    list-style: none;
+}
+.dropdown-arrow-logo{
+    height: 10px;
+    mix-blend-mode: multiply;
+}
+.dropdown-logo-rotate{
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+}
+.items{
+    margin-top: 13px;
+}
+.item1{
+    margin-top: 13px;
+}
+.item1:hover{
+    cursor: pointer;
+}
+.nav-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 19%;
+    width:200px;
+    padding-top: 23px;
+}
+
+.search-logo{
+    height: 25px;
+    mix-blend-mode: multiply;
+}
+.sign-in-btn{
+    background-color: rgb(55, 85, 217);
+    height: 27px;
+    width: 100px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    letter-spacing: 0.15rem;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.sign-in-btn:hover{
+    background-color: rgba(55, 85, 225, 0.7);
+    
+}
+button,.items,.search-logo:hover{
+    cursor: pointer;
+    
+}
+/*-------------------------------------------- BODY HTML'S CSS------------------------------ */
+.welcome-img{
+    display: block;
+    margin: auto;
+    width: 90%;
+    height:550px;
+}
+.sec-one{
+    margin-top: 64px;
+}
+
+
+/*-------------------------------------------- FOOTER HTML'S CSS------------------------------ */
+footer{
+    display: flex;
+    background-color: rgb(164, 176, 5);
+    height: 200px;
+    margin-top: 50px;
+    color: rgb(26, 83, 182);
+}
+.footer-logo{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.f-logo{
+    width: 100px;
+}
+.details{
+    margin-left: 20px;
+    margin-top: 40px;
+    line-height: 2rem;
+}
+.payment-methods{
+    margin-left: 20px;
+    margin-top: 40px;
+    line-height: 2rem;
+}
