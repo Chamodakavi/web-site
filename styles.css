@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: "uni";
+    color: white;
 }
 
 header{
@@ -36,8 +37,9 @@ header{
     transition: all .5s;
     width: 100%;
     position: fixed;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(75, 65, 65);
     transition: 0.5s ease;
+    
 }
 .fixed-nav{
     display: flex;
@@ -47,49 +49,47 @@ header{
     transition: 0.5s ease;
 }
 
-.show-nav{
-    height: 260px;
-    transition: all .5s;
-    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
-} 
-
-.restaurant-logo{
-    width: 68px;
-    height: 55px;
-    margin-top: -7px;
-    margin-left: -5px;
-}
 .nav-container{
     padding-top: 15px;
     padding-left: 30px;
-    width: 65%;
+    width: 75%;
     display: flex;
     justify-content: space-around;
     font-size: 0.9rem;
     transition: all .5s;
 }
-.nav-con-click{
-    font-size: 0.8rem;
-}
+
 ul{
     list-style: none;
 }
-.dropdown-arrow-logo{
-    height: 10px;
-    mix-blend-mode: multiply;
+
+.item{
+    padding-top: 13px;
+    padding-left: 25px;
+    padding-right: 5px;
+   
+   
 }
-.dropdown-logo-rotate{
-    transform: rotate(180deg);
-    transition: transform 0.5s ease-in-out;
+.nav-container li .dropdown{
+    position: absolute;
+    top: 63px;
+    background-color: rgb(255, 255, 255);
+    width: 800%;
+    height: 500%;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    
 }
-.items{
-    margin-top: 13px;
+.nav-container li .dropdown a{
+    color: black;
 }
-.item1{
-    margin-top: 13px;
+.nav-container li .dropdown a:hover{
+    color: brown;
 }
-.item1:hover{
-    cursor: pointer;
+.nav-container li:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
 }
 .nav-buttons{
     display: flex;
@@ -99,6 +99,12 @@ ul{
     padding-top: 23px;
 }
 
+.restaurant-logo{
+    width: 68px;
+    height: 55px;
+    margin-top: -7px;
+    margin-left: -5px;
+}
 .search-logo{
     height: 25px;
     mix-blend-mode: multiply;
@@ -117,7 +123,7 @@ ul{
     background-color: rgba(55, 85, 225, 0.7);
     
 }
-button,.items,.search-logo:hover{
+button,.item,.search-logo:hover{
     cursor: pointer;
     
 }
