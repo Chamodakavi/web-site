@@ -4,7 +4,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -36,11 +36,9 @@ header{
 .nav{
     display: flex;
     height: 64px;
-    transition: all .5s;
     width: 100%;
     position: fixed;
     background-color: rgb(186, 179, 179);
-    transition: 0.5s ease;
     
 }
 .fixed-nav{
@@ -48,7 +46,7 @@ header{
     width: 100%;
     position: fixed;
     top: -10px;
-    transition: 0.5s ease;
+    transition:all 5s ease-out;
 }
 
 .nav-container{
@@ -57,7 +55,6 @@ header{
     width: 100%;
     display: flex;
     justify-content:space-between;
-    transition: all .5s;
 }
 
 ul{
@@ -65,12 +62,12 @@ ul{
 }
 
 .item{
-    width: 102px;
-    height: 43px;
-    padding-top: 20px;
+    width: 142px;
+    height: 42px;
+    padding-top: 21px;
     padding-left: 10px;
     margin-top: -14px;
-    
+    text-align: center;
 }
 .item:hover{
     background-color: white;
@@ -85,21 +82,33 @@ ul{
 }
 
 .nav-container li .dropdown{
-    position: absolute;
-    top: 63px;
+    position: relative;
+    top: 23px;
     background-color: rgb(255, 255, 255);
-    width: 800%;
-    height: 500%;
-    left: 0px;
+    width: 200px;
+    height: auto;
     visibility: hidden;
     opacity: 0;
+    cursor: default;
+    border-radius:0px 0px 10px 10px;
     
 }
+
 .nav-container li .dropdown a{
-    color: black;
+    display: block;
+    font-size: 0.9rem;
+    text-align: left;
+    position: relative;
+    line-height: 40px;
+    padding-left: 10px;
+    width: auto;    
+    
 }
 .nav-container li .dropdown a:hover{
     color: brown;
+    background-color: rgb(211, 186, 186);
+    border-radius: 10px;
+    padding-left: 20px;
 }
 .nav-container li:hover .dropdown{
     visibility: visible;
