@@ -54,7 +54,7 @@ header{
 .nav-container{
     padding-top: 15px;
     padding-left: 30px;
-    width: 75%;
+    width: 100%;
     display: flex;
     justify-content:space-between;
     transition: all .5s;
