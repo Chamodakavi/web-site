@@ -3,6 +3,8 @@
     src: url(fonts/Univers\ LT\ Std\ 45\ Light.otf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -37,7 +39,7 @@ header{
     transition: all .5s;
     width: 100%;
     position: fixed;
-    background-color: rgb(75, 65, 65);
+    background-color: rgb(186, 179, 179);
     transition: 0.5s ease;
     
 }
@@ -54,8 +56,7 @@ header{
     padding-left: 30px;
     width: 75%;
     display: flex;
-    justify-content: space-around;
-    font-size: 0.9rem;
+    justify-content:space-between;
     transition: all .5s;
 }
 
@@ -64,12 +65,25 @@ ul{
 }
 
 .item{
-    padding-top: 13px;
-    padding-left: 25px;
-    padding-right: 5px;
-   
-   
+    width: 102px;
+    height: 43px;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-top: -14px;
+    
 }
+.item:hover{
+    background-color: white;
+}
+.nav-container li a{
+    font-family: "Montserrat";
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
 .nav-container li .dropdown{
     position: absolute;
     top: 63px;
@@ -100,10 +114,10 @@ ul{
 }
 
 .restaurant-logo{
-    width: 68px;
-    height: 55px;
-    margin-top: -7px;
-    margin-left: -5px;
+    width: 70px;
+    height: 63px;
+    margin-top: -14px;
+    margin-left: -16px;
 }
 .search-logo{
     height: 25px;
@@ -127,6 +141,7 @@ button,.item,.search-logo:hover{
     cursor: pointer;
     
 }
+
 /*-------------------------------------------- BODY HTML'S CSS------------------------------ */
 .welcome-img{
     display: block;
