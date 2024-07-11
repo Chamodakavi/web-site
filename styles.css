@@ -384,6 +384,7 @@ button,.item,.search-logo:hover{
 .sec-five{
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
 }
 .sec-five p{
     font-size: 0.8rem;
@@ -395,26 +396,44 @@ button,.item,.search-logo:hover{
 }
 /*-------------------------------------------- FOOTER HTML'S CSS------------------------------ */
 footer{
-    display: flex;
     background-color: rgb(164, 176, 5);
-    height: 200px;
+    height: auto;
     margin-top: 50px;
     color: rgb(26, 83, 182);
 }
-.footer-logo{
-    padding-top: 50px;
-    padding-left: 50px;
-}
-.f-logo{
-    width: 100px;
-}
-.details{
+footer img{
+    width: 150px;
     margin-left: 20px;
-    margin-top: 40px;
-    line-height: 2rem;
 }
-.payment-methods{
+.det{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.det h3{
+    margin-bottom: 10px;
+}
+.qr{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.qr h3{
+    font-size: 0.8rem;
     margin-left: 20px;
-    margin-top: 40px;
-    line-height: 2rem;
+    color: rgb(205, 44, 36);
+}
+.f1{
+    display: flex;
+}
+.f2{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+.f , .t{
+    text-align: center;
+}
+.f{
+    padding-top: 20px;
+}
+.t{
+    padding-bottom: 10px;
 }
