@@ -66,23 +66,22 @@ const benefitsArray = [
 
 let currentItem = 0;
 console.log("init"+currentItem);
-
+//call functions.
 window.addEventListener("DOMContentLoaded", function () {
-    
   displayMainImg();
   displayRooms();
   displaybenefits();
 });
 
+//welcome img display
 const welcomeImgContainer = document.querySelector('.welcome-img-container');
-
 function displayMainImg(){
   const firstImg = imgArray[0];
   const main = `<img src="${firstImg.main_img}" alt="" class="welcome-img">`;
   welcomeImgContainer.innerHTML = main;
 
 }
-
+//display room informations.
 const rooms = document.querySelector('.rooms');
 function displayRooms(){
   let main = "";
@@ -98,8 +97,8 @@ function displayRooms(){
   rooms.innerHTML = main;
 }
 
+//display benefits information.
 const benefits = document.querySelector('.benefits');
-
 function displaybenefits(){
   let main = "";
   for(let i = 0 ; i <= benefitsArray.length - 1; i++ ){
@@ -112,9 +111,8 @@ function displaybenefits(){
   benefits.innerHTML = main;
 }
 
-
+//welcome img next btn.
 const nextbtn = document.querySelector('.slider-r');
-
 nextbtn.addEventListener("click",function(){
   currentItem++;
   console.log(currentItem);
@@ -127,8 +125,8 @@ nextbtn.addEventListener("click",function(){
   welcomeImgContainer.innerHTML = main;
 });
 
+//welcome img back btn.
 const prevbtn = document.querySelector('.slider-l');
-
 prevbtn.addEventListener("click",function(){
   currentItem--;
   console.log(currentItem);
@@ -136,15 +134,11 @@ prevbtn.addEventListener("click",function(){
     currentItem =imgArray.length-1;
   }
   const back =imgArray[currentItem];
-  
-  // console.log(back);
-  // console.log("in con"+currentItem);
   const main = `<img src="${back.main_img}" alt="" class="welcome-img">`;
   welcomeImgContainer.innerHTML = main;
 });
 
-
-
+//fixed navigation bar when scroll.
 const nav = document.querySelector(".nav");
 window.addEventListener("scroll", function () {
   const scrollHeight = window.pageYOffset;
@@ -156,6 +150,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
+//back to top btn click.
 const btn = document.querySelector('.btn');
 btn.addEventListener('click', function(){
     window.scrollTo({
@@ -164,9 +159,8 @@ btn.addEventListener('click', function(){
   });
 })
 
-
+//back to top btn display.
 window.addEventListener('scroll', function (){
-
   const scrollHeight = window.pageYOffset;
   console.log(scrollHeight);
   // Check if the current scroll position is greater than half of the page height
