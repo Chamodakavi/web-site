@@ -50,7 +50,7 @@ header{
     height: 64px;
     width: 100%;
     position: fixed;
-    background-color: rgb(186, 179, 179);
+    background-color: rgb(255, 255, 255);
     
 }
 .fixed-nav{
@@ -81,7 +81,7 @@ ul{
     text-align: center;
 }
 .item:hover{
-    background-color: white;
+    background-color: rgb(200, 194, 194);
 }
 .nav-container li a{
     font-family: "Montserrat";
@@ -196,21 +196,34 @@ button,.item,.search-logo:hover{
 .sec-two{
     background-color: #f0e7e7;
     display: flex;
-    height: 300px;
+    height: auto;
 }
 .hr{
     width: 2px;
-    height: 280px;
+    height: auto;
     background-color: #595353;
-    margin-left: 10px;
+    margin-left: 50px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .description{
-    margin-left: 30px;
+    margin-left: 70px;
     width: 40%;
     font-size: 20px;
-    
+    margin-bottom: 20px;
 }
+.description .description-title{
+    color: rgb(0, 0, 240);
+    font-family: serif;
+    font-weight: 900;
+}
+.description-para{
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 2rem;
+
+}
+
 .sec-two h2{
     color: blue;
     font-weight: bolder;
@@ -218,16 +231,117 @@ button,.item,.search-logo:hover{
     font-size: 2rem;
     margin-top: 30px;
 }
+.description-two{
+    margin-left: 20px;
+}
 .description-title-two{
     margin-left: 20px;
     text-transform: uppercase;
-    font-weight:900;
+    font-family: serif;
+    font-weight: 900;
 }
-.description-para{
+.desc-two-list{
+    display: grid;
+    grid-template-areas: 
+    "li li li"
+    ;
+}
+.desc-two-list li{
+    margin: 20px;
+    display: flex;
+    text-transform: capitalize;
+}
+.list-img{
+    width: 50px;
+    margin-top: -15px;
+    margin-right: 10px;
+}
+.sec-three{
+    margin-top: 50px;
+}
+.description-title-three{
+    color: rgb(0, 0, 240);
+    font-family: serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: serif;
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+}
+.benefits{
+    display: flex;
     font-size: 1rem;
-    text-align: justify;
+    justify-content: space-evenly;
+    margin-top: 50px;
 }
 
+.list-2-img{
+    width: 50px;
+}
+.benefit-item p{
+    color: rgb(17, 36, 184);
+    width: 100px;
+    font-size: 0.9rem;
+}
+.rooms{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+.rooms:hover{
+    cursor: pointer;
+}
+.rooms img{
+    width: 420px;
+    margin-top: -20px;
+    object-fit: cover;
+}
+.rooms img:hover{
+    scale: 1.1;
+    transition: 0.5s ease;
+}
+.room-menu{
+    width: 420px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(233, 226, 226);
+    overflow: hidden;
+}
+.room-menu a{
+    text-decoration: none;
+}
+.room-menu a:hover{
+    text-decoration: underline;
+}
+.room-menu p{
+    color: #8c0707;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.description-title-three{
+    margin-bottom: 50px;
+}
+.sec-four img{
+    position: relative;
+    top: 10px;
+    width: 30px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.sec-four p{
+    color: rgb(158, 152, 152);
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+}
+.sec-four span{
+    position: relative;
+  
+    text-align: left;
+}
 /*-------------------------------------------- FOOTER HTML'S CSS------------------------------ */
 footer{
     display: flex;
