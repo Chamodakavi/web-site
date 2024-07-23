@@ -43,7 +43,7 @@
             <a href="index.html"><li class="item">Spa</li></a>
             <a href="index.html"><li class="item">Bar</li></a>
             <a href="index.html"><li class="item">About Us</li></a>
-            <a href="contactUs.html"><li class="item">Contact Us</li></a>
+            <a href="contactUsPage.php"><li class="item">Contact Us</li></a>
         </ul>
         <div class="box">
         </div>
