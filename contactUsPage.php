@@ -94,7 +94,7 @@
             <br>
             
             <label for="message">Message:</label> <br>
-            <textarea placeholder="Enter your message here*" name="message" id="message" class="message-box" required></textarea>
+            <textarea class="message-box" placeholder="Enter your message here*" name="message" id="message"  required></textarea>
             <br>
             
             <button type="submit" name="submit">Submit</button>
@@ -145,6 +145,10 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
+
+
+<!------------------------ php code ---------------------------------------------->
+
 
 <?php
    

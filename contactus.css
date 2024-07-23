@@ -87,6 +87,6 @@ button{
     object-fit: cover;
     padding-top: 100px;
 }
-textarea .message-box{
-    color: #be2121;
+textarea {
+    margin-left: 30px;
 }
