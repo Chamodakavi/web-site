@@ -74,11 +74,11 @@
             <h1>Send us a message</h1>
         
             <label for="f-name" class="lab">First Name: </label> <br>
-            <input type="text" placeholder="First name" class="name" name="f-name" id="f-name" required>
+            <input type="text" placeholder="First name" name="f-name" id="f-name" required>
             <br>
             
             <label for="l-name" class="lab">Last Name: </label> <br>
-            <input type="text" placeholder="Last name" class="name" name="l-name" id="l-name" required>
+            <input type="text" placeholder="Last name" name="l-name" id="l-name" required>
             <br>
             
             <label for="email">Email Address:</label> <br>
