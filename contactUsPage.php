@@ -9,7 +9,6 @@
     
 </head>
 <body>
-    <!-- this is users's changes..... -->
     <header>
         <img src="images/cinnamon-lakeside-drk.svg" alt="" class="h-logo">
         <div class="nav-buttons">
@@ -71,28 +70,36 @@
     </section>
 
     <section class="form-container">
-        <form action="" method="post" class="form">
-            
+        <form method="post" class="form">
             <h1>Send us a message</h1>
-
-            <label for="name" class="lab">Name: </label> <br>
-            <input type="text" placeholder="First name " class="name">
-            <input type="text" placeholder="Last name " class="name">
+        
+            <label for="f-name" class="lab">First Name: </label> <br>
+            <input type="text" placeholder="First name" class="name" name="f-name" id="f-name" required>
             <br>
-            <label for="name">Email Address:</label>    <br>
-            <input type="email" placeholder="Eg: abc@gmail.com ">
+            
+            <label for="l-name" class="lab">Last Name: </label> <br>
+            <input type="text" placeholder="Last name" class="name" name="l-name" id="l-name" required>
             <br>
-            <label for="name">Phone:</label>     <br>
-            <input type="number" placeholder="+94 78 452 4356">
+            
+            <label for="email">Email Address:</label> <br>
+            <input type="email" placeholder="Eg: abc@gmail.com" name="email" id="email" required>
             <br>
-            <label for="name">Subject:</label>   <br>
-            <input type="text" placeholder="enter your subject ">
+            
+            <label for="tp">Phone:</label> <br>
+            <input type="tel" placeholder="+94 78 452 4356" name="tp" id="tp" required>
             <br>
-            <label for="name">Message:</label>   <br>
-            <input type="text" placeholder="enter your message in here*">
+            
+            <label for="subject">Subject:</label> <br>
+            <input type="text" placeholder="Enter your subject" name="subject" id="subject" required>
             <br>
-            <button type="submit">Submit</button>
+            
+            <label for="message">Message:</label> <br>
+            <textarea placeholder="Enter your message here*" name="message" id="message" required></textarea>
+            <br>
+            
+            <button type="submit" name="submit">Submit</button>
         </form>
+        
     </section>
 
    
@@ -135,5 +142,49 @@
 
     </footer>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
+
+<?php
+   
+    include "connection.php";
+
+      if(isset($_POST['submit'])){
+
+        $firstName = $_POST['f-name'];
+        $lastName = $_POST['l-name'];
+        $email = $_POST['email'];
+        $tp = $_POST['tp'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];  
+
+        $stmt = $conn->prepare("INSERT INTO contactUs (fname, lname, email, tp, subject, message) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $firstName, $lastName, $email, $tp, $subject, $message);
+        
+        if($stmt->execute()){
+
+            // close php tag
+            ?> 
+
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+            <script>
+            
+            swal("Success", "Message Submitted", "success");
+            
+            </script>
+
+
+            <!-- open php tag again. -->
+            <?php
+
+        }
+
+
+        $stmt->close();
+        $conn->close();
+    }
+
+
+?>
