@@ -43,7 +43,7 @@
             <a href="index.html"><li class="item">Spa</li></a>
             <a href="index.html"><li class="item">Bar</li></a>
             <a href="index.html"><li class="item">About Us</li></a>
-            <a href="contactUs.html"><li class="item">Contact Us</li></a>
+            <a href="contactUsPage.php"><li class="item">Contact Us</li></a>
         </ul>
         <div class="box">
         </div>
@@ -94,7 +94,7 @@
             <br>
             
             <label for="message">Message:</label> <br>
-            <textarea placeholder="Enter your message here*" name="message" id="message" required></textarea>
+            <textarea placeholder="Enter your message here*" name="message" id="message" class="message-box" required></textarea>
             <br>
             
             <button type="submit" name="submit">Submit</button>
