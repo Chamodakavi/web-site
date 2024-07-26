@@ -79,3 +79,14 @@ input:focus, textarea:focus, select:focus {
 button:hover{
     cursor: pointer;
 }
+.backBtn{
+    position: absolute;
+    top: 600px;
+    right: 30px;
+    line-height: 1.3rem;
+    background-color: rgba(254, 254, 254, 0);
+    width: auto;
+    color: rgb(107, 10, 10);
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
