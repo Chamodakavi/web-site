@@ -12,7 +12,7 @@
     <header>
         <img src="images/cinnamon-lakeside-drk.svg" alt="" class="h-logo">
         <div class="nav-buttons">
-         <a href="adminLogin.html"><button type="button" class="sign-in-btn">Admin LogIn</button></a>
+         <a href="adminLogin.php"><button type="button" class="sign-in-btn">Admin LogIn</button></a>
      </div>
      </header>
      <nav class="nav">

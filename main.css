@@ -154,7 +154,8 @@ a{
     color: rgb(255, 255, 255);
     letter-spacing: 0.15rem;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: -18px;
+    margin-top: -6px;
+    width: 100%;
 }
 .sign-in-btn:hover{
     background-color: rgba(55, 85, 225, 0.7);
@@ -164,16 +165,7 @@ button,.item,.search-logo:hover{
     cursor: pointer;
     
 }
-/* --------------------------------------other necessary css---------------------------------- */
 
-.hr{
-    width: 2px;
-    height: auto;
-    background-color: #595353;
-    margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 /*-------------------------------------------- FOOTER HTML'S CSS------------------------------ */
 footer{
     background-color: rgb(164, 176, 5);
@@ -235,4 +227,12 @@ footer img{
     
 .btn img:hover{
     cursor: pointer;
+}
+.hr{
+    width: 2px;
+    height: auto;
+    background-color: #595353;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
