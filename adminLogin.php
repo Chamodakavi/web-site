@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Check if user exists
   if ($result->num_rows > 0) {
     // Redirect to the next page
-    header("Location: dashboard.php");
+    header("Location: dashboard.html");
 
     exit;
   } else {

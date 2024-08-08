@@ -9,5 +9,8 @@
     // Database connection
     $conn = mysqli_connect('localhost', 'root', '', 'hotelbookingsystem');
 
+    // if($conn){
+    //     echo "kkk";
+    // }
 
 ?>
