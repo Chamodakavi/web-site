@@ -45,11 +45,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Check if user exists
   if ($result->num_rows > 0) {
     // Redirect to the next page
-    header("Location: x.html");
+    header("Location: dashboard.php");
 
     exit;
   } else {
-    
+
     ?> 
 
             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

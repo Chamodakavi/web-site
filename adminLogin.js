@@ -17,6 +17,8 @@ function validate(){
             password.value = "";
             return false;
         }else{
+            username.value = "";
+            password.value = "";
             return true;
         }
 
