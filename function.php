@@ -14,4 +14,16 @@
         return $result;
     }
 
+    function displayContactUsDetails(){
+
+        global $conn;
+
+        $query = "SELECT * from contactus";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result;
+    }
+
 ?>

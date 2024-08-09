@@ -1,7 +1,7 @@
 
 <?php
     include "function.php";
-    $result = displayLoginData();
+    $result = displayContactUsDetails();
 ?>
 
 <!DOCTYPE html>
@@ -28,26 +28,18 @@
                         <th>Message</th>
                     </tr>
     
-                    <!-- get data from db and saves it in result variable in while loop-->
                     <?php
                         while($row = mysqli_fetch_assoc($result)){
                     ?>
-    
-                    <!-- open tr tag to display retrieved data -->
                     <tr>  
-                            <!-- display user id -->
-                            <td><?php echo $row['Id']; ?> </td>
-    
-                            <!-- display user name -->
-                            <td><?php echo $row['username']; ?> </td>
-    
-                            <!-- display user password -->
-                            <td><?php echo $row['password']; ?> </td>
-                            
-                    <!-- close tr tag -->
+                    <td><?php echo $row['fname']; ?> </td>
+                    <td><?php echo $row['lname']; ?> </td>
+                    <td><?php echo $row['email']; ?> </td>
+                    <td><?php echo $row['tp']; ?> </td>
+                    <td><?php echo $row['subject']; ?> </td>
+                    <td><?php echo $row['message']; ?> </td>
                     </tr>
-    
-                    <!-- close php while loop -->
+
                     <?php
                         }
                     ?>
