@@ -16,12 +16,17 @@
         
         if($stmt->execute()){
             // close php tag
-            header("Location: admin-contactUs.php");
+            header("Location: admin-adminDetails.php");
         }
 
-        
         $stmt->close();
         $conn->close();
+    }
+
+    if(isset($_GET['id'])){
+
+        $id=$_GET['id'];
+        deleteAdmin($id);
     }
 
 
@@ -35,16 +40,34 @@
     <title>Document</title>
 </head>
 <body>
+    
     <section>
         <div class="content-body">
         <h1>Admin Details</h1>
         <div class="line"></div>
+
+        <div class="form-container">
+                <h2>Add New User</h2>
+                <form method="post">
+                    <div class="field">
+                        <label for="username">Username :</label>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div class="field">
+                        <label for="password">Password :</label>
+                        <input type="password" name="password" id="password">   
+                    </div>
+                    <div class="btn-field"><button type="submit" name="submit">Add</button></div>
+                </form>
+            </div>
+
             <div class="scroll">
                 <table>
                     <tr>
                         <th>User ID</th>
                         <th>User Name</th>
                         <th>Password</th>
+                        <th>Actions</th>
                     </tr>
     
                     <!-- get data from db and saves it in result variable in while loop-->
@@ -62,6 +85,12 @@
     
                             <!-- display user password -->
                             <td><?php echo $row['password']; ?> </td>
+                            <td>
+                                <?php
+                                    print('<a href="admin-adminDetails.php?id=' . $row['Id'] . '" class="action-link update">Update</a>');
+                                    print('<a href="admin-adminDetails.php?id=' . $row['Id'] . '" class="action-link delete">Delete</a>');
+                                ?>
+                            </td>
                             
                     <!-- close tr tag -->
                     </tr>
@@ -73,22 +102,11 @@
     
                 </table>
             </div>
-            <div class="form-container">
-                <h2>Add New User</h2>
-                <form method="post">
-                    <div class="field">
-                        <label for="username">Username :</label>
-                        <input type="text" name="username" id="username">
-                    </div>
-                    <div class="field">
-                        <label for="password">Password :</label>
-                        <input type="password" name="password" id="password">   
-                    </div>
-                    <div class="btn-field"><button type="submit" name="submit">Add</button></div>
-                </form>
-            </div>
+            
         </div>
+
     </section>
+    <a href="dashboard.html" class="back">back to dashboard</a>
 </body>
 </html>
 

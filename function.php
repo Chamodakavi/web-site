@@ -26,4 +26,17 @@
         return $result;
     }
 
+    function deleteAdmin($id){
+
+        global $conn;
+
+        $query = "DELETE FROM logindata WHERE Id = '$id'";
+        $stmt = $conn->prepare($query);
+
+        if($stmt->execute()){
+            header("Location: admin-adminDetails.php");
+        }
+        
+    }
+
 ?>

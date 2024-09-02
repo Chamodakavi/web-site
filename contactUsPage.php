@@ -70,7 +70,7 @@
     </section>
 
     <section class="form-container">
-        <form method="post" class="form">
+        <form method="post" class="form" onsubmit="return validate()">
             <h1>Send us a message</h1>
         
             <label for="f-name" class="lab">First Name: </label> <br>
@@ -97,7 +97,7 @@
             <textarea placeholder="Enter your message here*" name="message" id="message" required></textarea>
             <br>
             
-            <button type="submit" name="submit">Submit</button>
+            <button type="submit" name="submit" id="submit">Submit</button>
         </form>
         
     </section>
@@ -142,6 +142,7 @@
 
     </footer>
     <script src="main.js"></script>
+    <script src="contactUsPage.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
