@@ -65,7 +65,7 @@
    
         </div>
     </section>
-    <a href="dashboard.html" class="back">back to dashboard</a>
+    <a href="admin-adminDetails.php" class="back">back to admin-Details</a>
 </body>
 </html>
 
