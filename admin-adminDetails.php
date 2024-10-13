@@ -59,7 +59,7 @@
                     </div>
                     <div class="btn-field"><button type="submit" name="submit">Add</button></div>
                 </form>
-            </div>
+        </div>
 
             <div class="scroll">
                 <table>
@@ -87,8 +87,8 @@
                             <td><?php echo $row['password']; ?> </td>
                             <td>
                                 <?php
-                                    print('<a href="admin-adminDetails.php?id=' . $row['Id'] . '" class="action-link update">Update</a>');
-                                    print('<a href="admin-adminDetails.php?id=' . $row['Id'] . '" class="action-link delete">Delete</a>');
+                                    print('<a href="admin-adminUpdate.php?id=' .$row['Id']. '" class="action-link update">Update</a>');
+                                    print('<a href="admin-adminDetails.php?id=' .$row['Id']. '" class="action-link delete">Delete</a>');
                                 ?>
                             </td>
                             
