@@ -13,11 +13,12 @@ body {
 .sam-our-bar-title {
     font-family: 'Arial', sans-serif;
     font-size: 100px;
-    color: #fcfcfc;
+    color: #fcfcfc !important;
     margin-top: 50px; 
     margin-bottom: 50px; 
     text-align: center; 
 }
+
 
 
 /* Bar Section Style */
@@ -32,13 +33,13 @@ body {
 
 .sam-bar-section h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff;
 }
 
 /* New Header Style */
 .sam-bar-section h3 {
     margin: 20px 0 15px;
-    color: #555;
+    color: #f1efef;
 }
 
 /* Carousel Style */

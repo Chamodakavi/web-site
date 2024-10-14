@@ -87,7 +87,7 @@ function displayRooms(){
   let main = "";
   for(let i = 0 ; i <= roomArray.length - 1; i++ ){
      main += `<div class="room-menu">
-                    <a href="x.html">
+                    
                       <img src="${roomArray[i].main_img}" alt="" srcset="">
                       <p>${roomArray[i].desc}</p>
                     </a>
