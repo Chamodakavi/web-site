@@ -41,13 +41,13 @@ input{
     width: 80%;
     line-height: 2rem;
 }
-button{
+.sub{
     display: block;
     margin: auto;
-    width: 100px;
+    width: 150px;
     line-height: 2rem;
     font-size: 0.8rem;
-}
+} 
 .contact{
     display: flex;
     justify-content: space-evenly;
@@ -55,7 +55,7 @@ button{
 
 .para{
     padding-top: 20px;
-    color: rgb(224, 182, 182);
+    color: rgb(247, 247, 247);
     font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
 }
@@ -69,7 +69,7 @@ button{
 }
 .c-h2 , .c-h3{
     padding-top: 20px;
-    color: rgb(224, 182, 182);
+    color: rgb(255, 255, 255);
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
 }

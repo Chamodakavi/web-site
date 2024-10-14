@@ -1,54 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+<?php include('header.html'); ?>
+
     <link rel="stylesheet" href="contactus.css">
-    <title>Contact us Page</title>
-    
-</head>
-<body>
-    <header>
-        <img src="images/cinnamon-lakeside-drk.svg" alt="" class="h-logo">
-        <div class="nav-buttons">
-         <a href="adminLogin.php"><button type="button" class="sign-in-btn">Admin LogIn</button></a>
-     </div>
-     </header>
-     <nav class="nav">
-        <ul class="nav-container">  
-            <li >
-                <a href="index.html">
-                    <img src="images/Editable-Cafe-Restaurant-Logo.jpg" alt="" srcset="" class="restaurant-logo">
-                </a>
-            </li>
+    <link rel="stylesheet" href="styles.css">
 
-            <a href="index.html"><li class="item">Home</li></a>
-
-            <li class="item">Rooms & Suites
-                <ul class="dropdown">     
-                    <li><a href="x.html">All</a></li>
-                    <li><a href="x.html">Suites</a></li>
-                    <li><a href="x.html">Rooms</a></li>
-                </ul>
-            </li>
-
-            <li class="item">Dining
-                <ul class="dropdown">
-                    <li><a href="x.html">Foods & Beverages</a></li>
-                    <li><a href="x.html">bar</a></li>
-                </ul>
-            </li>
-            <a href="index.html"><li class="item">Foods & Beverages</li></a>
-            <a href="index.html"><li class="item">Spa</li></a>
-            <a href="index.html"><li class="item">Bar</li></a>
-            <a href="index.html"><li class="item">About Us</li></a>
-            <a href="contactUsPage.php"><li class="item">Contact Us</li></a>
-        </ul>
-        <div class="box">
-        </div>
-    </nav>
-    
     <img src="images/LeadOberoi-1366x768.jpg" alt="" srcset="" class="wel-img">
 
     <section class="contactus-container">
@@ -97,12 +51,14 @@
             <textarea placeholder="Enter your message here*" name="message" id="message" required></textarea>
             <br>
             
-            <button type="submit" name="submit" id="submit">Submit</button>
+            <button type="submit" name="submit" id="submit" class="sub">Submit</button>
         </form>
         
     </section>
 
-   
+    <div class="btn">
+        <img src="images/up-arrow.png" alt="" srcset="">
+    </div>
 
      <footer>
         <div class="f1">
