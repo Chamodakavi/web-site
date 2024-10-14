@@ -82,5 +82,5 @@
 </div>
 
 <br><br><br><br><br>
-
+<script src="spa.js"></script>
 <?php include('footer.html'); ?>
