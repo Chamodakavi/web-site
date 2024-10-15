@@ -39,4 +39,41 @@
         
     }
 
+
+    function displayRoomReservations(){
+
+        global $conn;
+
+        $query = "SELECT * from form";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result;
+    }
+
+    function displaySpaReservations(){
+
+        global $conn;
+
+        $query = "SELECT * from spa";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result;
+    }
+
+    function displayHallReservations(){
+
+        global $conn;
+
+        $query = "SELECT * from hall_bookings";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result;
+    }
+
 ?>

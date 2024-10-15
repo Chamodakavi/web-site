@@ -1,6 +1,8 @@
+
 <?php include('header.html'); ?>
 
 <link rel="stylesheet" href="spa.css">
+<script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
 
 <header class="hero">
         <div class="hero-text">
@@ -59,7 +61,7 @@
     <div class="modal-content">
         <span class="close-btn" id="closeModalBtn">&times;</span>
         <h3>Book an Appointment</h2>
-        <form>
+        <form  method="post">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
@@ -76,11 +78,59 @@
             <label for="date">Preferred Date:</label>
             <input type="date" id="date" name="date" required>
 
-            <button type="submit" class="cta-button">Submit</button>
+            <button type="submit" class="cta-button" name="submit" id="submit">Submit</button>
         </form>
     </div>
 </div>
 
 <br><br><br><br><br>
 <script src="spa.js"></script>
+
 <?php include('footer.html'); ?>
+
+
+<?php
+include "connection.php";
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $service = $_POST['service'];
+    $date = $_POST['date'];
+
+    // Prepare the statement
+    $stmt = $conn->prepare("INSERT INTO spa (name, email, service, date) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $name, $email, $service, $date);
+
+    if ($stmt->execute()) {
+        // Successfully inserted data. Now let's output the JavaScript for swal
+        echo "
+            <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+            <script>
+                swal({
+                    title: 'Success',
+                    text: 'Appointment Added.',
+                    icon: 'success'
+                }).then(function() {
+                    // Optional: Redirect to another page after the alert is closed
+                    //window.location.href = 'index.php';
+                });
+            </script>
+        ";
+    } else {
+        // Error case (optional)
+        echo "
+            <script>
+                swal({
+                    title: 'Error',
+                    text: 'Could not book your appointment.',
+                    icon: 'error'
+                });
+            </script>
+        ";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>

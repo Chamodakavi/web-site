@@ -44,6 +44,6 @@
             <button type="button" class="booking" id="Btn">Book Now</button>
         </div>
     </div>
-
+<script src="roomBook.js"></script>
 <br><br><br><br><br><br><br><br><br><br>
 <?php include('footer.html'); ?>

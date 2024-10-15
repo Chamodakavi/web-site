@@ -8,7 +8,7 @@
     
     <section class="booking">
         <div class ="Section container booking_Container">
-          <form action="available.php" method="post">
+          <form action="roomAvailable.php" method="post">
             <div class="input_group">
                <label for="arrival"> Check-in Date</label> 
                <input type="Date" name="arrival" placeholder="YOur Arrival Date">  
@@ -99,5 +99,6 @@
             <button id="next-btn">→</button>
         </div>
         
-        <script src="feedback.js"></script>
+<script src="feedback.js"></script>
+<script src="roomBook.js"></script>
 <?php include('footer.html'); ?>

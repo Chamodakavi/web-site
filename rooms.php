@@ -74,6 +74,6 @@
     </div>
     
 
-    
+    <script src="roomBook.js"></script>    
 
 <?php include('footer.html'); ?>
