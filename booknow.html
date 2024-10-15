@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-group .radio-label {
+            margin-right: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Hall Booking for Events</h2>
+    <form action="save_booking.php" method="post">
+        <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="event-type">Event Type</label>
+            <select id="event-type" name="event-type" required>
+                <option value="">Select event type</option>
+                <option value="wedding">Wedding</option>
+                <option value="conference">Conference</option>
+                <option value="party">Party</option>
+                <option value="seminar">Seminar</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" placeholder="Enter number of guests" required min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="hall-type">Hall Type</label>
+            <select id="hall-type" name="hall-type" required>
+                <option value="">Select hall type</option>
+                <option value="small">Small Hall (Up to 50 Guests)</option>
+                <option value="medium">Medium Hall (Up to 150 Guests)</option>
+                <option value="large">Large Hall (Up to 300 Guests)</option>
+                <option value="banquet">Banquet Hall (More than 300 Guests)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Event Date</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Additional Requirements</label>
+            <textarea id="comments" name="comments" placeholder="Enter any additional requests (e.g., catering, decoration)"></textarea>
+        </div>
+
+        <button type="submit">Submit Booking</button>
+    </form>
+</div>
+
+</body>
+</html>

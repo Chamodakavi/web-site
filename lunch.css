@@ -1,0 +1,53 @@
+
+ .ucontainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+} 
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+} 
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}  
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}  
+
+.menu-item-description {
+    padding: 15px;
+    flex-grow: 1;
+} 
+
+.menu-item-description h4 {
+    margin-bottom: 10px;
+    color: #555;
+} 
+
+.menu-item-description p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.menu-item-price {
+    padding: 0 15px 15px;
+    font-weight: bold;
+    color: #333;
+} 
+
+.usecone{
+    margin-top: 120px;
+}

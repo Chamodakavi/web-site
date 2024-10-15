@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #003051;
+}
+img{
+    display: block;
+    width: 100%;
+    height: 730px;
+    object-fit: cover;
+    filter: blur(3px);
+}
+.login-container{
+    position: absolute;
+    top: 100px;
+    left: 490px;
+    width: 40%;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+form{
+    position: relative;
+    left: 100px;
+    width: 50%;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgb(0, 0, 0);
+    z-index: 999;
+    
+}
+label{
+    display: block;
+    margin-left: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #23006c;
+    width: 50%;
+    font-size: 1.2rem;
+}
+form h1{
+    margin-bottom: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input{
+    display: block;
+    margin-left: 40px;
+    border: none;
+    background-color: rgba(136, 116, 116, 0);
+    border-bottom: 2px solid rgb(254, 47, 0);
+    width: 80%;
+    margin-top: -12px;
+    line-height: 1rem;
+    font-size: 1rem;
+    color: #3e0614;
+}
+
+button{
+    display: block;
+    margin-left: 50px;
+    margin-top: 60px;
+    width: 40%;
+    line-height: 1rem;
+    background-color: #9eeb0f;
+    border: none;
+    height: 30px;
+    font-size: 1rem;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    font-size: 1rem;
+    color: #3e0614;
+}
+button:hover{
+    cursor: pointer;
+}
+.backBtn{
+    position: absolute;
+    top: 600px;
+    right: 30px;
+    line-height: 1.3rem;
+    background-color: rgba(254, 254, 254, 0);
+    width: auto;
+    color: rgb(107, 10, 10);
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
