@@ -22,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare SQL query to check for overlapping bookings
     $stmt = $conn->prepare("SELECT COUNT(*) FROM form 
-                            WHERE `Name(R/S/E)` = ? 
-                            AND ((`Check-in Date` <= ? AND `Check-out Date` >= ?) 
-                            OR (`Check-in Date` >= ? AND `Check-in Date` <= ?))");
+                            WHERE `Rname` = ? 
+                            AND ((`checkin` <= ? AND `checkout` >= ?) 
+                            OR (`checkout` >= ? AND `checkin` <= ?))");
     if (!$stmt) {
         die('Prepare failed: ' . $conn->error);
     }

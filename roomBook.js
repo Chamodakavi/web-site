@@ -37,11 +37,3 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('BOoking Form').reset();
     });
 });
-
-
-
-
-
-
-
-

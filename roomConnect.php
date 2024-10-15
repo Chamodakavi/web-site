@@ -12,8 +12,8 @@ if ($conn->connect_error) {
     die('Connection Failed: ' . $conn->connect_error);
 } else {
     // Prepare a statement to check for existing bookings
-    $checkStmt = $conn->prepare("SELECT COUNT(*) FROM form WHERE `Name` = ? AND `Check-in Date` = ? AND `Check-out Date` = ?");
-    $checkStmt->bind_param("sss", $name, $checkin, $checkout);
+    $checkStmt = $conn->prepare("SELECT COUNT(*) FROM form WHERE Rname = ? AND checkin = ? AND checkout = ?");
+    $checkStmt->bind_param("sss", $Rname, $checkin, $checkout);
     $checkStmt->execute();
     $checkStmt->bind_result($count);
     $checkStmt->fetch();
@@ -24,7 +24,7 @@ if ($conn->connect_error) {
         echo "<script>alert('There is an existing booking for this name, check-in date, and check-out date.Do Another Booking.Have A Nice Day!');</script>";
     } else {
         // Proceed to insert a new booking
-        $stmt = $conn->prepare("INSERT INTO form (`Name`, `Email`, `Check-in Date`, `Check-out Date`, `Number of Guests`, `Name(R/S/E)`) 
+        $stmt = $conn->prepare("INSERT INTO form (Name, Email, checkin, checkout, guests, Rname) 
         VALUES (?, ?, ?, ?, ?, ?)");
 
         if ($stmt === false) {

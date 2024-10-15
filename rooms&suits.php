@@ -17,10 +17,25 @@
                 <label for="depature"> Check-out Date</label> 
                 <input type="Date" name="depature" placeholder="YOur Depature Date">  
                 </div>
-            <div class="input_group">
-              <label for="guest">Room/Executives/Suites Name</label> 
-              <input type="text" name="roomName" placeholder="name">  
-            </div>
+                <div class="input_group">
+                <label for="guest">Room/Executives/Suites Name</label> 
+                <select id="Room" name="roomName">
+                  <option value="Double Room">Double Room</option>
+                  <option value="Twin room">Twin room</option>
+                  <option value="Single room">Single room</option>
+                  <option value="King room">King room</option>
+                  <option value="Queen room">Queen room</option>
+                  <option value="Triple room">Triple room</option>
+                  <option value="Quadruple room">Quadruple room</option>
+                  <option value="Junior Suite">Junior Suite</option>
+                  <option value="Executive Suite">Executive Suite</option>
+                  <option value="Penthouse Suite">Penthouse Suite</option>
+                  <option value="Executive Club Room">Executive Club Room</option>
+                  <option value="Executive Family Room">Executive Family Room</option>
+                  <option value="Executive Deluxe Room">Executive Deluxe Room</option>
+                </select>
+                
+              </div>
             <button class="Btn">Check Availability</button>
           </form> 
         </section>
