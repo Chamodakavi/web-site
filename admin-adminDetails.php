@@ -47,7 +47,7 @@
 
         <div class="form-container">
                 <h2>Add New User</h2>
-                <form method="post">
+                <form method="post" onsubmit="return validate()">
                     <div class="field">
                         <label for="username">Username :</label>
                         <input type="text" name="username" id="username" required>
@@ -58,6 +58,12 @@
                     </div>
                     <div class="btn-field"><button type="submit" name="submit">Add</button></div>
                 </form>
+                <div class="password">
+                    <p>Password should contain atleast 6 characters.</p>
+                    <p>Password should contain atleast one Symbol.</p>
+                    <p>Password should contain Uppercase letter at the beggining.</p>
+                    <p>Password should contain atleast two numbers.</p>
+                </div>
         </div>
 
         <div class="scroll">
@@ -106,6 +112,6 @@
             });
         }
     </script>
-
+    <script src="admin-adminDetails.js"></script>
 </body>
 </html>
