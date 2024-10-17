@@ -25,34 +25,47 @@
 
     <section class="form-container">
         <form method="post" class="form" onsubmit="return validate()">
-            <h1>Send us a message</h1>
-        
-            <label for="f-name" class="lab">First Name: </label> <br>
-            <input type="text" placeholder="First name" name="f-name" id="f-name" required>
-            <br>
-            
-            <label for="l-name" class="lab">Last Name: </label> <br>
-            <input type="text" placeholder="Last name" name="l-name" id="l-name" required>
-            <br>
-            
-            <label for="email">Email Address:</label> <br>
-            <input type="email" placeholder="Eg: abc@gmail.com" name="email" id="email" required>
-            <br>
-            
-            <label for="tp">Phone:</label> <br>
-            <input type="tel" placeholder="+94 78 452 4356" name="tp" id="tp" required>
-            <br>
-            
-            <label for="subject">Subject:</label> <br>
-            <input type="text" placeholder="Enter your subject" name="subject" id="subject" required>
-            <br>
-            
-            <label for="message">Message:</label> <br>
-            <textarea placeholder="Enter your message here*" name="message" id="message" required></textarea>
-            <br>
-            
-            <button type="submit" name="submit" id="submit" class="sub">Submit</button>
+                    <h1>Send us a message</h1>
+                
+                    <label for="f-name" class="lab">First Name: </label> <br>
+                    <input type="text" placeholder="First name" name="f-name" id="f-name" required>
+                    <img src="images/greentick.png" alt="valid" id="tick-fname" class="validate tick">
+                    <img src="images/redcross.webp" alt="invalid" id="cross-fname" class="validate cross">
+                    <br>
+                
+                    <label for="l-name" class="lab">Last Name: </label> <br>
+                    <input type="text" placeholder="Last name" name="l-name" id="l-name" required>
+                    <img src="images/greentick.png" alt="valid" id="tick-lname" class="validate tick">
+                    <img src="images/redcross.webp" alt="invalid" id="cross-lname" class="validate cross">
+                    <br>
+                
+                    <label for="email">Email Address:</label> <br>
+                    <input type="email" placeholder="Eg: abc@gmail.com" name="email" id="email" required>
+                    <img src="images/greentick.png" alt="valid" id="tick-email" class="validate tick">
+                    <img src="images/redcross.webp" alt="invalid" id="cross-email" class="validate cross">
+                    <br>
+                
+                    <label for="tp">Phone:</label> <br>
+                    <input type="tel" placeholder="+94 78 452 4356" name="tp" id="tp" required>
+                    <img src="images/greentick.png" alt="valid" id="tick-tp" class="validate tick">
+                    <img src="images/redcross.webp" alt="invalid" id="cross-tp" class="validate cross">
+                    <br>
+                
+                    <label for="subject">Subject:</label> <br>
+                    <input type="text" placeholder="Enter your subject" name="subject" id="subject" required>
+                    <img src="images/greentick.png" alt="valid" id="tick-subject" class="validate tick">
+                    <img src="images/redcross.webp" alt="invalid" id="cross-subject" class="validate cross">
+                    <br>
+                
+                    <label for="message">Message:</label> <br>
+                    <textarea placeholder="Enter your message here*" name="message" id="message" required></textarea>
+                    <img src="images/greentick.png" alt="valid" id="tick-message" class="validate tick">
+                    <img src="images/redcross.webp" alt="invalid" id="cross-message" class="validate cross">
+                    <br>
+                
+                    <button type="submit" name="submit" id="submit" class="sub">Submit</button>
         </form>
+
         
     </section>
 

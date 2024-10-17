@@ -1,0 +1,18 @@
+
+/* validation */
+.validate {
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+}
+.cross{
+    margin-left: -20px;
+}
+
+.show {
+    visibility: visible !important;
+}
+
+.hide {
+    visibility: hidden !important;
+}

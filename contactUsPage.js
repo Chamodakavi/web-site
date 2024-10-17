@@ -1,33 +1,73 @@
 
 
-function validate(){
+// Regular Expressions
+const nameRegex = /^[A-Za-z\s]+$/; 
+const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+const phoneRegex = /^0\d{9}$/;
+const subjectRegex = /^.{1,100}$/; 
+const messageRegex = /^.{1,500}$/;
 
-    var fname = document.getElementById("f-name");
-    var lname = document.getElementById("l-name");
+var fname = document.getElementById("f-name");
+var lname = document.getElementById("l-name");
+var email = document.getElementById('email');
+var phone = document.getElementById('tp');
+var subject = document.getElementById('subject');
+var message = document.getElementById('message');
 
-        if(fname.value.trim() === "" || lname.value.trim() === ""){
-            alert("Enter valid Username and Password");
-            return false;
-        }else{
-            return true;
-        }
+// Validation function for individual fields
+function validateField(input, regex) {
+    const tick = input.nextElementSibling;
+    const cross = tick.nextElementSibling;
 
+    if (regex.test(input.value)) {
+        tick.classList.add("show");
+        cross.classList.remove("show");
+    } else {
+        tick.classList.remove("show");
+        cross.classList.add("show");
+    }
 }
 
-// function submit() {
+// Add event listeners for input fields
+fname.addEventListener("input", () => {
+    validateField(fname, nameRegex);
+});
 
-//     let x = validate();
+lname.addEventListener("input", () => {
+    validateField(lname, nameRegex);
+});
 
-//     if (!x) {
-      
-//       // Form is invalid, disable submit button and show error
-//       document.getElementById("submit").disabled = true;
-//       alert("cannot submit");
-//       return false; // Prevent form submission
-//     } else {
-//       // Form is valid, you can submit it here
-//       // For example:
-//       // document.myForm.submit(); // Assuming your form has the name "myForm"
-//       return true; // Allow form submission
-//     }
-//   }
+email.addEventListener("input", () => {
+    validateField(email, emailRegex);
+});
+
+phone.addEventListener("input", () => {
+    validateField(phone, phoneRegex);
+});
+
+subject.addEventListener("input", () => {
+    validateField(subject, subjectRegex);
+});
+
+message.addEventListener("input", () => {
+    validateField(message, messageRegex);
+});
+
+
+function validate(){
+
+        var fname = document.getElementById("f-name").value;
+        var lname = document.getElementById("l-name").value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('tp').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+    
+    
+            if(nameRegex.test(fname) && nameRegex.test(lname)&& emailRegex.test(email)&& phoneRegex.test(phone)&& subjectRegex.test(subject)&& messageRegex.test(message)){
+                return true;
+            }else{
+                alert("Enter valid Details");
+                return false;
+            }
+};

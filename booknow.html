@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hall Booking Form</title>
+    <link rel="stylesheet" href="validation.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -68,20 +69,26 @@
 
 <div class="container">
     <h2>Hall Booking for Events</h2>
-    <form action="save_booking.php" method="post">
+    <form action="save_booking.php" method="post" onsubmit="return validate()">
         <div class="form-group">
             <label for="full-name">Full Name</label>
             <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+            <img src="images/greentick.png" alt="valid" id="tick-fname" class="validate tick ">
+            <img src="images/redcross.webp" alt="invalid" id="cross-fname" class="validate cross ">
         </div>
 
         <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <img src="images/greentick.png" alt="valid" id="tick-email" class="validate tick ">
+            <img src="images/redcross.webp" alt="invalid" id="cross-email" class="validate cross ">
         </div>
 
         <div class="form-group">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <img src="images/greentick.png" alt="valid" id="tick-number" class="validate tick ">
+            <img src="images/redcross.webp" alt="invalid" id="cross-number" class="validate cross ">
         </div>
 
         <div class="form-group">
@@ -125,6 +132,6 @@
         <button type="submit">Submit Booking</button>
     </form>
 </div>
-
+    <script src="validation.js"></script>
 </body>
 </html>
