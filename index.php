@@ -1,3 +1,46 @@
+
+<?php 
+
+    include('connection.php'); 
+
+
+    if(isset($_POST['submit'])){
+
+        $name = $_POST['name'];
+        $tp = $_POST['tp'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+
+        $stmt = $conn->prepare("INSERT INTO registeruser (name, telephone, address, email) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $name, $tp, $address, $email);
+        
+        if($stmt->execute()){
+
+            // close php tag
+            ?> 
+
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+            <script>
+            
+            swal("Success", "Message Submitted", "success");
+            
+            </script>
+
+
+            <!-- open php tag again. -->
+            <?php
+
+        }
+
+
+        $stmt->close();
+        $conn->close();
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,28 +215,40 @@
 
     </footer>
 
-    <div class="modal">
+
+    <!-- --------------------------------------------user registration form----------------- -->
+
+
+
         <div class="form-container" id="form-container">
+
             <form action="post" onsubmit="return validate()">
-                <span class="close-btn" id="closeModalBtn">&times;</span>
-                <label for="name">Full Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required><br>
-    
-                <label for="telephone">Number:</label><br>
-                <input type="tel" id="telephone" name="telephone" placeholder="Enter your telephone" required><br>
-    
-                <label for="Address">Address:</label><br>
-                <input type="text" id="address" name="address" placeholder="Enter your address" required><br>
-    
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
-    
-                <br>
-                <button type="submit" class="cta-button" name="submit" id="submit">Submit</button>
+
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="enter your full name" required><br>
+
+            <label for="name">Telephone:</label><br>
+            <input type="text" id="tp" name="tp" placeholder="enter your mobile no" required><br>
+
+            <label for="name">Address:</label><br>
+            <input type="text" id="address" name="address" placeholder="enter your address" required><br>
+
+            <label for="name">Email:</label><br>
+            <input type="text" id="email" name="email" placeholder="enter your email" required><br>
+
+
+            <button type="submit" id="submit" name="submit">Submit</button>
+
             </form>
+
+
         </div>
-    </div>
-    
+
+
+        <!-- -------------------------------------------- end of user registration form----------------- -->
+
     <script src="form.js"></script>
     <script src="app.js"></script>
 </body>
