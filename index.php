@@ -20,12 +20,12 @@
     <nav class="nav">
         <ul class="nav-container">  
             <li >
-                <a href="index.html">
+                <a href="index.php">
                     <img src="images/Editable-Cafe-Restaurant-Logo.jpg" alt="" srcset="" class="restaurant-logo">
                 </a>
             </li>
 
-            <a href="index.html"><li class="item">Home</li></a>
+            <a href="index.php"><li class="item">Home</li></a>
 
             <a href="rooms&suits.php"><li class="item">Rooms & Suites</li></a>
 
@@ -189,14 +189,13 @@
                     <input type="text" id="name" name="name" placeholder="enter your full name" required><br>
 
                     <label for="name">Telephone:</label><br>
-                    <input type="text" id="tp" name="tp" placeholder="enter your mobile no" required><br>
+                    <input type="text" id="tp" name="tp" placeholder="enter your Mobile no" required><br>
 
                     <label for="name">Address:</label><br>
                     <input type="text" id="address" name="address" placeholder="enter your address" required><br>
-
+                
                     <label for="name">Email:</label><br>
                     <input type="text" id="email" name="email" placeholder="enter your email" required><br>
-
 
                     <button type="submit" id="submit" name="submit">Submit</button>
 
@@ -224,6 +223,7 @@
         $tp = $_POST['tp'];
         $address = $_POST['address'];
         $email = $_POST['email'];
+        
 
         $stmt = $conn->prepare("INSERT INTO registeruser (name, telephone, address, email) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("siss", $name, $tp, $address, $email);
