@@ -23,7 +23,7 @@
         </div>
     </div>
     
-    <a href="index.html"><button type="button" class="backBtn">Back to home</button></a>
+    <a href="index.php"><button type="button" class="backBtn">Back to home</button></a>
     <script src="adminLogin.js"></script>
 </body>
 </html>
