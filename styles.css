@@ -463,3 +463,12 @@ footer img{
 .btn img:hover{
     cursor: pointer;
 }
+.register{
+    margin-top: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.register:hover{
+    color: white;
+    text-decoration: underline;
+}
