@@ -1,45 +1,4 @@
 
-<?php 
-
-    include('connection.php'); 
-
-
-    if(isset($_POST['submit'])){
-
-        $name = $_POST['name'];
-        $tp = $_POST['tp'];
-        $address = $_POST['address'];
-        $email = $_POST['email'];
-
-        $stmt = $conn->prepare("INSERT INTO registeruser (name, telephone, address, email) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssssss", $name, $tp, $address, $email);
-        
-        if($stmt->execute()){
-
-            // close php tag
-            ?> 
-
-            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-            <script>
-            
-            swal("Success", "Message Submitted", "success");
-            
-            </script>
-
-
-            <!-- open php tag again. -->
-            <?php
-
-        }
-
-
-        $stmt->close();
-        $conn->close();
-    }
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -222,24 +181,24 @@
 
         <div class="form-container" id="form-container">
 
-            <form action="post" onsubmit="return validate()">
+            <form method="post" onsubmit="return validate()">
 
-            <span class="close-btn" id="closeModalBtn">&times;</span>
+                    <span class="close-btn" id="closeModalBtn">&times;</span>
 
-            <label for="name">Full Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="enter your full name" required><br>
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="enter your full name" required><br>
 
-            <label for="name">Telephone:</label><br>
-            <input type="text" id="tp" name="tp" placeholder="enter your mobile no" required><br>
+                    <label for="name">Telephone:</label><br>
+                    <input type="text" id="tp" name="tp" placeholder="enter your mobile no" required><br>
 
-            <label for="name">Address:</label><br>
-            <input type="text" id="address" name="address" placeholder="enter your address" required><br>
+                    <label for="name">Address:</label><br>
+                    <input type="text" id="address" name="address" placeholder="enter your address" required><br>
 
-            <label for="name">Email:</label><br>
-            <input type="text" id="email" name="email" placeholder="enter your email" required><br>
+                    <label for="name">Email:</label><br>
+                    <input type="text" id="email" name="email" placeholder="enter your email" required><br>
 
 
-            <button type="submit" id="submit" name="submit">Submit</button>
+                    <button type="submit" id="submit" name="submit">Submit</button>
 
             </form>
 
@@ -253,3 +212,44 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+<?php 
+
+    include('connection.php'); 
+
+
+    if(isset($_POST['submit'])){
+
+        $name = $_POST['name'];
+        $tp = $_POST['tp'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+
+        $stmt = $conn->prepare("INSERT INTO registeruser (name, telephone, address, email) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("siss", $name, $tp, $address, $email);
+        
+        if($stmt->execute()){
+
+            // close php tag
+            ?> 
+
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+            <script>
+            
+            swal("Success", "Message Submitted", "success");
+            
+            </script>
+
+
+            <!-- open php tag again. -->
+            <?php
+
+        }
+
+
+        $stmt->close();
+        $conn->close();
+    }
+
+?>
