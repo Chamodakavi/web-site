@@ -33,6 +33,4 @@ function validate(){
             return false;
         }
 
-    
-
 };
