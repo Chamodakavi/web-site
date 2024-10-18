@@ -115,7 +115,7 @@ if (isset($_POST['submit'])) {
                     // Optional: Redirect to another page after the alert is closed
                     //window.location.href = 'index.php';
                 });
-            </script
+            </script>
         ";
     } else {
         // Error case (optional)
